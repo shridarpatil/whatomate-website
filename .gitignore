@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Backup files
+*.bak
+*.backup
+
+# Original single-file version (can be removed after verification)
+frappe-whatsapp-website.html
