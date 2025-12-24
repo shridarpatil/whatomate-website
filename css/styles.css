@@ -138,6 +138,11 @@ nav .container {
     transform: translateY(-2px);
 }
 
+.nav-cta-icon {
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
 /* Hero Section */
 .hero {
     padding: 180px 0 120px;

@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://whatomate.io/sitemap.xml
+
+# LLM/AI Crawler Information
+# See https://whatomate.io/llms.txt for AI-friendly site information
