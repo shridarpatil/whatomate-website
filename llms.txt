@@ -1,6 +1,6 @@
 # Whatomate - Open Source WhatsApp Business API Integration
 
-> Whatomate provides free, open-source WhatsApp Business API integration solutions for Frappe, ERPNext, or any system. Over 458+ active sites on Frappe Cloud.
+> Whatomate provides free, open-source WhatsApp Business API integration and helpdesk solutions for Frappe, ERPNext, or any system. Over 477+ active sites on Frappe Cloud.
 
 ## Overview
 
