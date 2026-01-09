@@ -1,15 +1,43 @@
-# Whatomate - Open Source WhatsApp Business API Integration
+# Whatomate - Open Source WhatsApp Business API
 
-> Whatomate provides free, open-source WhatsApp Business API integration and helpdesk solutions for Frappe, ERPNext, or any system. Over 477+ active sites on Frappe Cloud.
+> Whatomate is a free, open-source standalone WhatsApp Business API application. Built with Go for performance and Vue.js for a modern UI. Single binary, zero dependencies, works with any tech stack.
 
 ## Overview
 
-Whatomate offers two paths for WhatsApp Business automation:
+Whatomate provides WhatsApp Business automation as a standalone application that integrates with any system via REST API.
 
-1. **Frappe WhatsApp Suite** - Native integration for Frappe/ERPNext users
-2. **Whatomate Standalone** - A Go-based application that works with any tech stack
+## Whatomate (Primary Product)
 
-## Frappe WhatsApp Suite
+A standalone WhatsApp Business API application built with Go and Vue.js.
+
+### Features
+- Single binary deployment - no dependencies required
+- Go backend for blazing performance
+- Vue.js frontend for modern UI
+- Human handoff with message pool
+- REST API for easy integration
+- Works with any tech stack (Node.js, Python, PHP, Ruby, etc.)
+- 100% free and open source (MIT license)
+
+### Installation (Docker)
+```bash
+# Download compose file and sample config
+curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/docker/docker-compose.yml
+curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/config.example.toml
+
+# Copy and edit config
+cp config.example.toml config.toml
+
+# Run services
+docker compose up -d
+```
+
+- GitHub: https://github.com/shridarpatil/whatomate
+- Docs: https://shridarpatil.github.io/whatomate/
+
+## Frappe WhatsApp Suite (For Frappe/ERPNext Users)
+
+For users on Frappe/ERPNext, we also offer native integration apps. See https://whatomate.io/frappe.html
 
 Three integrated apps for Frappe/ERPNext:
 
@@ -43,43 +71,9 @@ Three integrated apps for Frappe/ERPNext:
 - GitHub: https://github.com/shridarpatil/frappe_whatsapp_chatbot
 - Docs: https://shridarpatil.github.io/frappe_whatsapp_chatbot/
 
-## Whatomate Standalone Application
-
-A standalone WhatsApp Business API application built with Go and Vue.js.
-
-### Features
-- Single binary deployment - no dependencies required
-- Go backend for blazing performance
-- Vue.js frontend for modern UI
-- Human handoff with message pool
-- REST API for easy integration
-- Works with any tech stack (Node.js, Python, PHP, Ruby, etc.)
-- 100% free and open source (MIT license)
-
-### Installation
-```bash
-git clone https://github.com/shridarpatil/whatomate.git
-```
-
-- GitHub: https://github.com/shridarpatil/whatomate
-- Docs: https://shridarpatil.github.io/whatomate/
-
-## Installation for Frappe
-
-```bash
-# Core (Required)
-bench get-app https://github.com/shridarpatil/frappe_whatsapp
-
-# Chat UI (Optional)
-bench get-app https://github.com/shridarpatil/whatsapp_chat
-
-# Chatbot (Optional)
-bench get-app https://github.com/shridarpatil/frappe_whatsapp_chatbot
-```
-
 ## Frappe Cloud Marketplace
 
-All Frappe apps are available on Frappe Cloud Marketplace:
+Frappe apps are available on Frappe Cloud Marketplace:
 - https://frappecloud.com/marketplace/apps/frappe_whatsapp
 - https://frappecloud.com/marketplace/apps/whatsapp_chat
 - https://frappecloud.com/marketplace/apps/frappe_whatsapp_chatbot
@@ -87,5 +81,6 @@ All Frappe apps are available on Frappe Cloud Marketplace:
 ## Contact
 
 - Website: https://whatomate.io
+- Frappe Apps: https://whatomate.io/frappe.html
 - Author: Shridhar Patil
 - GitHub: https://github.com/shridarpatil

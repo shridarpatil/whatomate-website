@@ -102,7 +102,7 @@ if (statsSection) {
 // Copy to clipboard
 function copyCode(button) {
     const codeBlock = button.parentElement;
-    const text = codeBlock.textContent.replace('Copy', '').replace('$', '').trim();
+    const text = codeBlock.textContent.replace('Copy', '').replace('Copied!', '').replace('$', '').trim();
     navigator.clipboard.writeText(text).then(() => {
         button.textContent = 'Copied!';
         setTimeout(() => {

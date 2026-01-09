@@ -6,26 +6,24 @@
 
     <!-- Referrer Policy (other security headers require HTTP headers, not supported on GitHub Pages) -->
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <title>Whatomate | Free Open Source WhatsApp Business API Integration</title>
-    <meta name="description" content="Free, open-source WhatsApp Business API integration and WhatsApp helpdesk for Frappe, ERPNext or any system. Bulk messaging, chatbot, templates. 477+ active sites.">
-    <meta name="keywords" content="WhatsApp Business API, free WhatsApp Business API, open source WhatsApp Business API, WhatsApp helpdesk, WhatsApp integration, WhatsApp for Frappe, WhatsApp for ERPNext, ERPNext WhatsApp, Frappe WhatsApp, WhatsApp chatbot open source, WhatsApp bulk messaging, standalone WhatsApp API, Go WhatsApp, WhatsApp customer support, WhatsApp ticketing system">
+    <title>Whatomate - Open Source WhatsApp Business API | Self-Hosted, Zero Dependencies</title>
+    <meta name="description" content="Free, open-source WhatsApp Business API. Standalone Go application with Vue.js UI. Single binary, zero dependencies, works with any stack. No per-message fees.">
+    <meta name="keywords" content="open source whatsapp api, free whatsapp business api, whatsapp cloud api integration, self-hosted whatsapp api, whatsapp automation opensource, whatsapp chatbot free, whatsapp bulk messaging free, whatsapp api no fees, whatsapp golang, whatsapp standalone application">
     <meta name="author" content="Shridhar Patil">
     <link rel="canonical" href="https://whatomate.io/">
-
-    <!-- Alternate URLs for canonicalization -->
-    <link rel="alternate" href="https://www.whatomate.io/" hreflang="en">
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Whatomate">
-    <meta property="og:title" content="Whatomate | Free Open Source WhatsApp Business API Integration">
-    <meta property="og:description" content="Free, open-source WhatsApp Business API and helpdesk for Frappe, ERPNext or any system. Bulk messaging, chatbot, templates.">
+    <meta property="og:title" content="Whatomate - Open Source WhatsApp Business API | Self-Hosted">
+    <meta property="og:description" content="Free, open-source WhatsApp Business API. Standalone Go application, zero dependencies, works with any stack.">
     <meta property="og:url" content="https://whatomate.io/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Whatomate | Free Open Source WhatsApp Business API Integration">
-    <meta name="twitter:description" content="Free WhatsApp Business API and helpdesk for Frappe, ERPNext or any system. Bulk messaging, chatbot, templates.">
+    <meta name="twitter:title" content="Whatomate - Open Source WhatsApp Business API">
+    <meta name="twitter:description" content="Free, open-source WhatsApp Business API. Standalone Go app, zero dependencies.">
 
     <!-- Favicon - Multiple formats for best browser support -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -57,7 +55,7 @@
         "name": "Whatomate",
         "url": "https://whatomate.io",
         "logo": "https://whatomate.io/assets/logo.png",
-        "description": "Open Source WhatsApp Business API integration. Frappe apps and standalone Go application.",
+        "description": "Open Source WhatsApp Business API - Standalone Go application with Vue.js UI.",
         "founder": {
             "@type": "Person",
             "name": "Shridhar Patil",
@@ -65,8 +63,8 @@
         },
         "foundingDate": "2022",
         "sameAs": [
-            "https://github.com/shridarpatil/frappe_whatsapp",
-            "https://github.com/shridarpatil/whatomate"
+            "https://github.com/shridarpatil/whatomate",
+            "https://github.com/shridarpatil/frappe_whatsapp"
         ]
     }
     </script>
@@ -82,54 +80,6 @@
             "target": "https://whatomate.io/?q={search_term_string}",
             "query-input": "required name=search_term_string"
         }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Frappe WhatsApp",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "description": "WhatsApp Business API integration for ERPNext & Frappe. Multi-account support, bulk messaging, template management, and WhatsApp Flows.",
-        "url": "https://github.com/shridarpatil/frappe_whatsapp"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "WhatsApp Chat",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "description": "Real-time WhatsApp chat interface for Frappe Desk. Contact management, media previews, and multi-user support.",
-        "url": "https://github.com/shridarpatil/whatsapp_chat"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "WhatsApp Chatbot",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "description": "Open source WhatsApp chatbot for ERPNext. Keyword-based auto-replies, conversation flows, and AI integration with OpenAI, Anthropic, Google.",
-        "url": "https://github.com/shridarpatil/frappe_whatsapp_chatbot"
     }
     </script>
     <script type="application/ld+json">
@@ -165,9 +115,8 @@
                 whatomate
             </a>
             <ul class="nav-links">
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#apps">Frappe Apps</a></li>
-                <li><a href="#whatomate">Whatomate</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#get-started">Get Started</a></li>
             </ul>
         </div>
     </nav>
@@ -205,34 +154,36 @@
         <div class="container">
             <div class="hero-badge">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
                 </svg>
-                Open Source &bull; Free Forever &bull; <span>477+ Active Sites</span>
+                Open Source &bull; Free Forever &bull; <span>Zero Dependencies</span>
             </div>
             <h1>
                 Comprehensive <span class="gradient">WhatsApp</span><br>Solution for Organizations
             </h1>
             <p class="hero-subtitle">
-                Two powerful solutions for WhatsApp Business automation. Native Frappe/ERPNext integration or standalone app &mdash; your choice, same great features.
+                Lightning-fast standalone WhatsApp Business API. Built with Go for performance, Vue.js for a modern UI. Single binary &mdash; works with any tech stack.
             </p>
             <div class="hero-buttons">
-                <a href="#solutions" class="btn btn-primary">
+                <a href="#get-started" class="btn btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 16 16 12 12 8"/>
-                        <line x1="8" y1="12" x2="16" y2="12"/>
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
                     </svg>
-                    Choose Your Solution
+                    Get Started
+                </a>
+                <a href="https://github.com/shridarpatil/whatomate" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View on GitHub
                 </a>
             </div>
             <div class="stats">
-                <div class="stat" data-target="477" data-suffix="+">
+                <div class="stat" data-target="1" data-suffix="">
                     <span class="stat-value">0</span>
-                    <span class="stat-label">Active Sites on Frappe Cloud</span>
+                    <span class="stat-label">Single Binary</span>
                 </div>
-                <div class="stat" data-target="3" data-suffix="">
+                <div class="stat" data-target="0" data-suffix="">
                     <span class="stat-value">0</span>
-                    <span class="stat-label">Integrated Apps</span>
+                    <span class="stat-label">Dependencies</span>
                 </div>
                 <div class="stat" data-target="100" data-suffix="%">
                     <span class="stat-value">0</span>
@@ -242,313 +193,13 @@
         </div>
     </section>
 
-    <!-- Choose Your Solution Section -->
-    <section class="choose-solution" id="solutions">
+    <!-- Features Section -->
+    <section class="whatomate" id="features">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Two solutions, one goal</span>
-                <h2 class="section-title">Choose your path</h2>
-                <p class="section-subtitle">Whether you're on Frappe/ERPNext or building something custom, we've got you covered.</p>
-            </div>
-            <div class="solution-grid">
-                <!-- Frappe Suite -->
-                <div class="solution-card frappe-solution fade-in">
-                    <div class="solution-badge">For Frappe/ERPNext Users</div>
-                    <div class="solution-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="solution-title">Frappe WhatsApp Suite</h3>
-                    <p class="solution-description">Native integration with your Frappe/ERPNext system. Three apps that extend your existing workflow.</p>
-                    <ul class="solution-features">
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Deep ERPNext integration
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            DocType event triggers
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Frappe Desk chat UI
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            One-click Frappe Cloud install
-                        </li>
-                    </ul>
-                    <a href="#apps" class="btn btn-secondary solution-btn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-                        Explore Suite
-                    </a>
-                </div>
-
-                <!-- Divider -->
-                <div class="solution-divider">
-                    <span>OR</span>
-                </div>
-
-                <!-- Whatomate Standalone -->
-                <div class="solution-card whatomate-solution fade-in">
-                    <div class="solution-badge standalone-badge">Standalone Application</div>
-                    <div class="solution-icon whatomate-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                        </svg>
-                    </div>
-                    <h3 class="solution-title">Whatomate</h3>
-                    <p class="solution-description">Lightning-fast standalone WhatsApp automation. Single binary, zero dependencies, works with any stack.</p>
-                    <ul class="solution-features">
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Single binary deployment
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Go backend + Vue.js frontend
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Human handoff with message pool
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Works with any system
-                        </li>
-                    </ul>
-                    <a href="#whatomate" class="btn btn-whatomate solution-btn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                        Learn More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Apps Section -->
-    <section class="apps" id="apps">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">The suite</span>
-                <h2 class="section-title">Three apps, one complete solution</h2>
-                <p class="section-subtitle">Each app handles a specific aspect of WhatsApp integration. Use them together or pick what you need.</p>
-            </div>
-            <div class="apps-grid">
-                <!-- App 1 -->
-                <div class="app-card fade-in">
-                    <div class="app-number">01</div>
-                    <h3 class="app-title">
-                        Frappe WhatsApp
-                        <span class="app-badge">Core</span>
-                    </h3>
-                    <p class="app-description">The foundation. Connect your WhatsApp Business API and start sending messages, templates, and notifications from your Frappe/ERPNext system.</p>
-                    <ul class="app-features">
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Multi-account support
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Two-way messaging
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Template management & sync from Meta
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            WhatsApp Flows (interactive forms)
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Bulk messaging with variables
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            WhatsApp Notifications (DocType events)
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Media support (images, docs, audio, video)
-                        </li>
-                    </ul>
-                    <div class="app-links">
-                        <a href="https://github.com/shridarpatil/frappe_whatsapp" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            GitHub
-                        </a>
-                        <a href="https://shridarpatil.github.io/frappe_whatsapp/" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            Docs
-                        </a>
-                        <a href="https://frappecloud.com/marketplace/apps/frappe_whatsapp" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            Marketplace
-                        </a>
-                    </div>
-                </div>
-
-                <!-- App 2 -->
-                <div class="app-card fade-in">
-                    <div class="app-number">02</div>
-                    <h3 class="app-title">
-                        WhatsApp Chat
-                        <span class="app-badge">UI</span>
-                    </h3>
-                    <p class="app-description">A beautiful chat interface right inside Frappe Desk. Manage customer conversations without leaving your ERP.</p>
-                    <ul class="app-features">
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Real-time messaging UI
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Contact management
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Media previews
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Auto read receipts
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Sound notifications
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Multi-user support
-                        </li>
-                    </ul>
-                    <div class="app-links">
-                        <a href="https://github.com/shridarpatil/whatsapp_chat" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            GitHub
-                        </a>
-                        <a href="https://github.com/shridarpatil/whatsapp_chat/blob/develop/README.md" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            Docs
-                        </a>
-                        <a href="https://frappecloud.com/marketplace/apps/whatsapp_chat" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            Marketplace
-                        </a>
-                    </div>
-                </div>
-
-                <!-- App 3 -->
-                <div class="app-card fade-in">
-                    <div class="app-number">03</div>
-                    <h3 class="app-title">
-                        WhatsApp Chatbot
-                        <span class="app-badge">AI</span>
-                    </h3>
-                    <p class="app-description">Automate responses with keyword triggers, conversation flows, and AI fallback. Let the bot handle routine queries.</p>
-                    <ul class="app-features">
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Keyword-based auto-replies
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Multi-step conversation flows
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Dynamic script responses
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Document creation from chat
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            AI fallback (OpenAI / Anthropic / Google)
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Session & business hours management
-                        </li>
-                    </ul>
-                    <div class="app-links">
-                        <a href="https://github.com/shridarpatil/frappe_whatsapp_chatbot" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            GitHub
-                        </a>
-                        <a href="https://shridarpatil.github.io/frappe_whatsapp_chatbot/#/" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            Docs
-                        </a>
-                        <a href="https://frappecloud.com/marketplace/apps/frappe_whatsapp_chatbot" class="app-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            Marketplace
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section class="use-cases" id="use-cases">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Which apps do you need?</span>
-                <h2 class="section-title">Choose your setup</h2>
-                <p class="section-subtitle">Pick the combination that fits your use case.</p>
-            </div>
-            <div class="table-wrapper fade-in">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Use Case</th>
-                            <th>frappe_whatsapp</th>
-                            <th>whatsapp_chat</th>
-                            <th>frappe_whatsapp_chatbot</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Send notifications & templates</strong></td>
-                            <td><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Customer support chat</strong></td>
-                            <td>&mdash;</td>
-                            <td><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Automated bot responses</strong></td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                            <td><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Full WhatsApp solution</strong></td>
-                            <td><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
-                            <td><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
-                            <td><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Whatomate Standalone Section -->
-    <section class="whatomate" id="whatomate">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label whatomate-label">Standalone solution</span>
-                <h2 class="section-title">Whatomate</h2>
-                <p class="section-subtitle">Not on Frappe? No problem. Get the same powerful WhatsApp automation as a standalone application.</p>
+                <span class="section-label whatomate-label">Why Whatomate</span>
+                <h2 class="section-title">Built for speed and simplicity</h2>
+                <p class="section-subtitle">Everything you need for WhatsApp Business automation, packaged in a single binary.</p>
             </div>
 
             <div class="whatomate-content">
@@ -557,31 +208,26 @@
                     <div class="whatomate-feature">
                         <div class="whatomate-feature-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
                             </svg>
                         </div>
-                        <h4>Lightning Fast</h4>
-                        <p>Built with Go for blazing performance. Handle thousands of messages with minimal resources.</p>
+                        <h4>Template management</h4>
+                        <p>Create, manage, and sync message templates from Meta. Use variables for personalized messaging.</p>
                     </div>
 
                     <!-- Feature 2 -->
                     <div class="whatomate-feature">
                         <div class="whatomate-feature-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
-                                <rect x="9" y="9" width="6" height="6"/>
-                                <line x1="9" y1="1" x2="9" y2="4"/>
-                                <line x1="15" y1="1" x2="15" y2="4"/>
-                                <line x1="9" y1="20" x2="9" y2="23"/>
-                                <line x1="15" y1="20" x2="15" y2="23"/>
-                                <line x1="20" y1="9" x2="23" y2="9"/>
-                                <line x1="20" y1="14" x2="23" y2="14"/>
-                                <line x1="1" y1="9" x2="4" y2="9"/>
-                                <line x1="1" y1="14" x2="4" y2="14"/>
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                             </svg>
                         </div>
-                        <h4>Single Binary</h4>
-                        <p>No dependencies, no runtime needed. Just download and run. Deploy anywhere in seconds.</p>
+                        <h4>Chatbot flows</h4>
+                        <p>Build automated conversation flows with keyword triggers, multi-step responses, and AI fallback.</p>
                     </div>
 
                     <!-- Feature 3 -->
@@ -594,7 +240,7 @@
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                             </svg>
                         </div>
-                        <h4>Human Handoff</h4>
+                        <h4>Human handoff</h4>
                         <p>Smart escalation with message pool. Agents pick from pre-written responses for faster support.</p>
                     </div>
 
@@ -620,7 +266,7 @@
                                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                             </svg>
                         </div>
-                        <h4>Any Stack</h4>
+                        <h4>Any stack</h4>
                         <p>REST API for easy integration. Works with Node.js, Python, PHP, Ruby &mdash; whatever you use.</p>
                     </div>
 
@@ -628,68 +274,53 @@
                     <div class="whatomate-feature">
                         <div class="whatomate-feature-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <polyline points="9 12 11 14 15 10"/>
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                             </svg>
                         </div>
-                        <h4>100% Free</h4>
-                        <p>Open source under MIT license. Use it, modify it, deploy it anywhere. No strings attached.</p>
-                    </div>
-                </div>
-
-                <div class="whatomate-install fade-in">
-                    <div class="whatomate-install-card">
-                        <div class="install-header">
-                            <h4>Quick Start</h4>
-                            <span class="tech-badge">Go + Vue.js</span>
-                        </div>
-                        <div class="code-block">
-                            git clone https://github.com/shridarpatil/whatomate.git
-                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <div class="whatomate-links">
-                            <a href="https://github.com/shridarpatil/whatomate" class="btn btn-whatomate" target="_blank" rel="noopener noreferrer">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                View on GitHub
-                            </a>
-                            <a href="https://shridarpatil.github.io/whatomate/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                Documentation
-                            </a>
-                        </div>
+                        <h4>Bulk messaging</h4>
+                        <p>Send messages to thousands of contacts at once. Import contacts, use templates, and track delivery.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Installation Section -->
-    <section class="installation" id="installation">
+    <!-- Get Started Section -->
+    <section class="installation" id="get-started">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Get started</span>
-                <h2 class="section-title">Installation</h2>
-                <p class="section-subtitle">Install via bench or get from Frappe Cloud Marketplace.</p>
+                <span class="section-label whatomate-label">Quick start</span>
+                <h2 class="section-title">Get started in minutes</h2>
+                <p class="section-subtitle">Deploy with Docker Compose in four simple steps.</p>
             </div>
-            <div class="install-cards">
-                <div class="install-card fade-in">
-                    <h4>Frappe WhatsApp <span>Required</span></h4>
+
+            <div class="install-cards fade-in">
+                <div class="install-card">
+                    <h4>1. Download compose file <span>Required</span></h4>
                     <div class="code-block">
-                        bench get-app https://github.com/shridarpatil/frappe_whatsapp
+                        curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/docker/docker-compose.yml
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                     </div>
                 </div>
-                <div class="install-card fade-in">
-                    <h4>WhatsApp Chat <span>Optional</span></h4>
+                <div class="install-card">
+                    <h4>2. Download config <span>Required</span></h4>
                     <div class="code-block">
-                        bench get-app https://github.com/shridarpatil/whatsapp_chat
+                        curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/config.example.toml
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                     </div>
                 </div>
-                <div class="install-card fade-in">
-                    <h4>WhatsApp Chatbot <span>Optional</span></h4>
+                <div class="install-card">
+                    <h4>3. Create config <span>Required</span></h4>
                     <div class="code-block">
-                        bench get-app https://github.com/shridarpatil/frappe_whatsapp_chatbot
+                        cp config.example.toml config.toml
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+                <div class="install-card">
+                    <h4>4. Run services <span>Final step</span></h4>
+                    <div class="code-block">
+                        docker compose up -d
                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                     </div>
                 </div>
@@ -703,17 +334,63 @@
             <div class="cta-box fade-in">
                 <div class="cta-content">
                     <h2>Ready to integrate WhatsApp?</h2>
-                    <p>Choose the solution that fits your stack. Both are free, open source, and production-ready.</p>
+                    <p>Whatomate is free, open source, and production-ready. Get started in minutes.</p>
                     <div class="hero-buttons">
-                        <a href="https://github.com/shridarpatil/frappe_whatsapp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                            Frappe Suite
-                        </a>
                         <a href="https://github.com/shridarpatil/whatomate" class="btn btn-whatomate" target="_blank" rel="noopener noreferrer">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                            Whatomate
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            Get Whatomate
+                        </a>
+                        <a href="https://shridarpatil.github.io/whatomate/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Read the Docs
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frappe Apps Section -->
+    <section class="choose-solution" id="frappe">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Also available</span>
+                <h2 class="section-title">Using Frappe or ERPNext?</h2>
+                <p class="section-subtitle">We also offer native WhatsApp integration apps for the Frappe ecosystem.</p>
+            </div>
+            <div class="solution-grid" style="grid-template-columns: 1fr;">
+                <!-- Frappe Suite -->
+                <div class="solution-card frappe-solution fade-in" style="max-width: 600px; margin: 0 auto;">
+                    <div class="solution-badge">For Frappe/ERPNext Users</div>
+                    <div class="solution-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Frappe WhatsApp Suite</h3>
+                    <p class="solution-description">Three integrated apps that extend your Frappe/ERPNext system with native WhatsApp capabilities. Deep DocType integration, Frappe Desk chat UI, and AI-powered chatbot.</p>
+                    <ul class="solution-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            500+ active sites on Frappe Cloud
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            One-click Frappe Cloud install
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            DocType event triggers
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            AI chatbot with OpenAI, Anthropic, Google
+                        </li>
+                    </ul>
+                    <a href="frappe.html" class="btn btn-secondary solution-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        Explore Frappe Apps
+                    </a>
                 </div>
             </div>
         </div>
@@ -727,9 +404,9 @@
                     Built by <a href="https://github.com/shridarpatil" target="_blank" rel="noopener noreferrer">Shridhar Patil</a> &bull; Free & Open Source
                 </div>
                 <div class="footer-links">
-                    <a href="https://github.com/shridarpatil/frappe_whatsapp" target="_blank" rel="noopener noreferrer">Frappe Suite</a>
-                    <a href="https://github.com/shridarpatil/whatomate" target="_blank" rel="noopener noreferrer">Whatomate</a>
-                    <a href="https://frappecloud.com/marketplace/apps/frappe_whatsapp" target="_blank" rel="noopener noreferrer">Marketplace</a>
+                    <a href="https://github.com/shridarpatil/whatomate" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="frappe.html">Frappe Apps</a>
+                    <a href="https://shridarpatil.github.io/whatomate/" target="_blank" rel="noopener noreferrer">Docs</a>
                 </div>
             </div>
         </div>
