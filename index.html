@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Referrer Policy (other security headers require HTTP headers, not supported on GitHub Pages) -->
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <title>Whatomate - Open Source WhatsApp Business API | Self-Hosted, Zero Dependencies</title>
-    <meta name="description" content="Free, open-source WhatsApp Business API. Standalone Go application with Vue.js UI. Single binary, zero dependencies, works with any stack. No per-message fees.">
-    <meta name="keywords" content="open source whatsapp api, free whatsapp business api, whatsapp cloud api integration, self-hosted whatsapp api, whatsapp automation opensource, whatsapp chatbot free, whatsapp bulk messaging free, whatsapp api no fees, whatsapp golang, whatsapp standalone application">
+    <title>Whatomate — Self-hosted WhatsApp Calling, IVR & Messaging</title>
+    <meta name="description" content="Open-source WhatsApp platform with inbound and outbound calling, visual node-based IVR, recordings to your S3 bucket, and messaging automation. Self-hosted.">
+    <meta name="keywords" content="whatsapp calling api, whatsapp ivr, self-hosted whatsapp, whatsapp voice api, whatsapp call recording, ivr flow builder, s3 call recordings, open source whatsapp business api, whatsapp golang">
     <meta name="author" content="Shridhar Patil">
     <link rel="canonical" href="https://whatomate.io/">
     <meta name="robots" content="index, follow">
@@ -16,16 +15,22 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Whatomate">
-    <meta property="og:title" content="Whatomate - Open Source WhatsApp Business API | Self-Hosted">
-    <meta property="og:description" content="Free, open-source WhatsApp Business API. Standalone Go application, zero dependencies, works with any stack.">
+    <meta property="og:title" content="Whatomate — Self-hosted WhatsApp Calling, IVR & Messaging">
+    <meta property="og:description" content="Inbound & outbound WhatsApp calls, visual IVR flow builder, recordings to your S3 bucket — open-source and self-hosted.">
     <meta property="og:url" content="https://whatomate.io/">
+    <meta property="og:image" content="https://whatomate.io/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Whatomate — Complete WhatsApp calling and messaging. Self-hosted.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Whatomate - Open Source WhatsApp Business API">
-    <meta name="twitter:description" content="Free, open-source WhatsApp Business API. Standalone Go app, zero dependencies.">
+    <meta name="twitter:title" content="Whatomate — WhatsApp Calling, IVR & Messaging. Self-hosted.">
+    <meta name="twitter:description" content="Inbound & outbound calls, visual IVR builder, recordings to S3 — open-source and self-hosted.">
+    <meta name="twitter:image" content="https://whatomate.io/assets/og-image.png">
+    <meta name="twitter:image:alt" content="Whatomate — Complete WhatsApp calling and messaging. Self-hosted.">
 
-    <!-- Favicon - Multiple formats for best browser support -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -33,18 +38,17 @@
     <link rel="manifest" href="assets/site.webmanifest">
     <meta name="theme-color" content="#25D366">
 
-    <!-- Fonts - Optimized loading with preconnect and swap -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 
-    <!-- Critical CSS for LCP optimization - inline above-the-fold styles -->
+    <!-- Critical CSS -->
     <style>
-        :root{--whatsapp-green:#25D366;--whatsapp-dark:#075E54;--whatsapp-teal:#128C7E;--bg-primary:#0a0f0d;--bg-secondary:#111916;--bg-card:#151d19;--text-primary:#f0f4f2;--text-secondary:#9ca89f;--border-color:#1e2a24;--accent-glow:rgba(37,211,102,0.15)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:2}nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;background:rgba(10,15,13,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-color)}nav .container{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.25rem;color:var(--text-primary);text-decoration:none}.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--whatsapp-green),var(--whatsapp-teal));border-radius:10px;display:flex;align-items:center;justify-content:center}.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{color:var(--text-secondary);text-decoration:none;font-weight:500;font-size:0.95rem}.nav-cta{background:var(--whatsapp-green);color:var(--bg-primary);padding:10px 24px;border-radius:8px;font-weight:600;text-decoration:none}.hero{padding:180px 0 120px;text-align:center;position:relative;overflow:hidden}.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;line-height:1.1;margin-bottom:24px}.hero h1 .gradient{background:linear-gradient(135deg,var(--whatsapp-green),#4ade80,var(--whatsapp-teal),var(--whatsapp-green));background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        :root{--green:#25D366;--green-dark:#1da851;--green-darker:#075E54;--teal:#128C7E;--bg:#08080a;--bg-raised:#0f0f12;--bg-card:#17171c;--bg-elevated:#1d1d23;--text:#f0f0f2;--text-secondary:#a0a0a8;--text-muted:#5f5f6a;--border:#1f1f26;--border-light:#2c2c36;--glow:rgba(37,211,102,0.08);--blue:#5b9dff;--amber:#f59e0b;--red:#ef4444;--violet:#a78bfa}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Noto Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:1rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}.container{max-width:1160px;margin:0 auto;padding:0 24px}nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;background:rgba(8,8,10,0.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}nav .container{display:flex;justify-content:space-between;align-items:center;height:100%}.logo{display:flex;align-items:center;gap:10px;font-weight:500;font-size:1.05rem;color:var(--text);text-decoration:none}.logo-mark{width:30px;height:30px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center}.nav-links{display:flex;gap:28px;list-style:none;align-items:center}.nav-links a{color:var(--text-secondary);text-decoration:none;font-weight:400;font-size:0.875rem;transition:color .15s}.hero{padding:140px 0 80px;position:relative;text-align:center;overflow:hidden}.hero-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse at center,rgba(37,211,102,0.14) 0%,rgba(37,211,102,0) 60%);pointer-events:none;z-index:0}.hero .container{position:relative;z-index:1}
     </style>
 
-    <!-- Main Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Structured Data -->
@@ -55,7 +59,7 @@
         "name": "Whatomate",
         "url": "https://whatomate.io",
         "logo": "https://whatomate.io/assets/logo.png",
-        "description": "Open Source WhatsApp Business API - Standalone Go application with Vue.js UI.",
+        "description": "Open source WhatsApp Business platform with calling, IVR, and messaging — self-hosted, built with Go and Vue.js.",
         "founder": {
             "@type": "Person",
             "name": "Shridhar Patil",
@@ -71,326 +75,990 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Whatomate",
-        "url": "https://whatomate.io",
-        "description": "Open Source WhatsApp Business API Integration",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://whatomate.io/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Whatomate",
-        "applicationCategory": "BusinessApplication",
+        "applicationCategory": "CommunicationApplication",
         "operatingSystem": "Linux, Windows, macOS",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
-        "description": "Standalone WhatsApp Business API application built with Go and Vue.js. Single binary, no dependencies, works with any stack.",
-        "url": "https://github.com/shridarpatil/whatomate"
+        "description": "Self-hosted WhatsApp Business platform with inbound and outbound calling, visual node-based IVR flow builder, call recording to S3, and messaging automation.",
+        "url": "https://github.com/shridarpatil/whatomate",
+        "featureList": [
+            "Inbound WhatsApp calls",
+            "Outbound WhatsApp calls",
+            "Node-based IVR flow builder",
+            "Call recording",
+            "S3 recording storage",
+            "REST API",
+            "Chatbot automation",
+            "Message templates",
+            "Bulk messaging"
+        ]
     }
     </script>
 </head>
 <body>
-    <div class="bg-pattern"></div>
-    <div class="noise"></div>
 
     <!-- Navigation -->
     <nav>
         <div class="container">
             <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a0f0d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <div class="logo-mark">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08080a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                     </svg>
                 </div>
-                whatomate
+                Whatomate
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#calling">Calling</a></li>
+                <li><a href="#ivr">IVR</a></li>
+                <li><a href="#recording">Recording</a></li>
+                <li><a href="#messaging">Messaging</a></li>
+                <li><a href="#developer">API</a></li>
+                <li><a href="https://shridarpatil.github.io/whatomate/" target="_blank" rel="noopener noreferrer">Docs</a></li>
+                <li>
+                    <a href="https://github.com/shridarpatil/whatomate" class="nav-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </li>
+                <li><a href="#get-started" class="btn btn-primary btn-sm">Get Started</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <!-- Animated background elements -->
-        <div class="hero-rings">
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-        </div>
-        <div class="hero-bubbles">
-            <div class="bubble">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(37, 211, 102, 0.5)" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </div>
-            <div class="bubble">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(37, 211, 102, 0.5)" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div class="bubble">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(37, 211, 102, 0.5)" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </div>
-            <div class="bubble">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(37, 211, 102, 0.5)" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div class="bubble">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(37, 211, 102, 0.5)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="bubble">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(37, 211, 102, 0.5)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-        </div>
-
+        <div class="hero-glow"></div>
         <div class="container">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-                Open Source &bull; Free Forever &bull; <span>Zero Dependencies</span>
-            </div>
+            <a href="#calling" class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Now shipping — WhatsApp calling
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
             <h1>
-                Comprehensive <span class="gradient">WhatsApp</span><br>Solution for Organizations
+                Complete WhatsApp calling<br>
+                and messaging. <span class="hero-gradient">Self-hosted.</span>
             </h1>
             <p class="hero-subtitle">
-                Lightning-fast standalone WhatsApp Business API. Built with Go for performance, Vue.js for a modern UI. Single binary &mdash; works with any tech stack.
+                Take inbound calls. Dial outbound. Route with a visual node-based IVR.
+                Save every recording to your own S3 bucket. Automate messaging.
+                All on infrastructure you control.
             </p>
-            <div class="hero-buttons">
-                <a href="#get-started" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            <div class="hero-actions">
+                <a href="#get-started" class="btn btn-primary btn-lg">
+                    Start self-hosting
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://github.com/shridarpatil/whatomate" class="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Star on GitHub
+                </a>
+            </div>
+            <div class="hero-pills">
+                <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Inbound + outbound calls</span>
+                <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Visual IVR builder</span>
+                <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Recordings → S3</span>
+                <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> REST API + webhooks</span>
+                <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> AGPL · open source</span>
+            </div>
+        </div>
+
+        <!-- Hero Visual: node-based IVR flow -->
+        <div class="container hero-visual-wrap">
+            <div class="product-window hero-window fade-in">
+                <div class="window-bar">
+                    <div class="window-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="window-tabs">
+                        <span class="window-tab active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg> IVR Flow</span>
+                        <span class="window-tab">Call Log</span>
+                        <span class="window-tab">Recordings</span>
+                    </div>
+                    <span class="window-meta"><span class="status-dot live"></span> Live</span>
+                </div>
+                <div class="flow-canvas">
+                    <svg class="flow-lines" viewBox="0 0 720 340" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="line-grad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#25D366" stop-opacity="0.35"/>
+                                <stop offset="100%" stop-color="#25D366" stop-opacity="0.85"/>
+                            </linearGradient>
+                            <linearGradient id="line-grad-dim" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#25D366" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#25D366" stop-opacity="0.4"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Incoming → IVR -->
+                        <path d="M 175 170 C 230 170, 260 170, 310 170" stroke="url(#line-grad)" stroke-width="1.6" fill="none"/>
+                        <!-- IVR → Sales -->
+                        <path d="M 490 170 C 540 170, 540 70, 590 70" stroke="url(#line-grad)" stroke-width="1.6" fill="none"/>
+                        <!-- IVR → Bot -->
+                        <path d="M 490 170 C 540 170, 540 170, 590 170" stroke="url(#line-grad)" stroke-width="1.6" fill="none"/>
+                        <!-- IVR → Transfer -->
+                        <path d="M 490 170 C 540 170, 540 270, 590 270" stroke="url(#line-grad)" stroke-width="1.6" fill="none"/>
+                        <!-- flowing dots -->
+                        <circle r="3" fill="#25D366">
+                            <animateMotion dur="2.4s" repeatCount="indefinite" path="M 175 170 C 230 170, 260 170, 310 170"/>
+                        </circle>
+                        <circle r="3" fill="#25D366">
+                            <animateMotion dur="2.8s" begin="0.8s" repeatCount="indefinite" path="M 490 170 C 540 170, 540 70, 590 70"/>
+                        </circle>
                     </svg>
-                    Get Started
-                </a>
-                <a href="https://github.com/shridarpatil/whatomate" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    View on GitHub
-                </a>
-            </div>
-            <div class="stats">
-                <div class="stat" data-target="1" data-suffix="">
-                    <span class="stat-value">0</span>
-                    <span class="stat-label">Single Binary</span>
-                </div>
-                <div class="stat" data-target="0" data-suffix="">
-                    <span class="stat-value">0</span>
-                    <span class="stat-label">Dependencies</span>
-                </div>
-                <div class="stat" data-target="100" data-suffix="%">
-                    <span class="stat-value">0</span>
-                    <span class="stat-label">Free & Open Source</span>
+
+                    <div class="flow-node flow-node-incoming">
+                        <div class="flow-node-icon icon-call">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="flow-node-body">
+                            <span class="flow-node-kind">Trigger</span>
+                            <span class="flow-node-title">Incoming call</span>
+                            <span class="flow-node-meta">+1 (555) 0142</span>
+                        </div>
+                        <span class="flow-port right"></span>
+                    </div>
+
+                    <div class="flow-node flow-node-ivr">
+                        <span class="flow-port left"></span>
+                        <div class="flow-node-icon icon-ivr">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></svg>
+                        </div>
+                        <div class="flow-node-body">
+                            <span class="flow-node-kind">IVR Menu</span>
+                            <span class="flow-node-title">Main greeting</span>
+                            <div class="ivr-options">
+                                <span><kbd>1</kbd> Sales</span>
+                                <span><kbd>2</kbd> Support</span>
+                                <span><kbd>3</kbd> Billing</span>
+                            </div>
+                        </div>
+                        <span class="flow-port right"></span>
+                    </div>
+
+                    <div class="flow-node flow-node-sales">
+                        <span class="flow-port left"></span>
+                        <div class="flow-node-icon icon-agent">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div class="flow-node-body">
+                            <span class="flow-node-kind">Agent</span>
+                            <span class="flow-node-title">Sales queue</span>
+                            <span class="flow-node-meta"><span class="status-dot online"></span> Anna picked up</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-node flow-node-bot">
+                        <span class="flow-port left"></span>
+                        <div class="flow-node-icon icon-agent">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div class="flow-node-body">
+                            <span class="flow-node-kind">Queue</span>
+                            <span class="flow-node-title">Support queue</span>
+                            <span class="flow-node-meta"><span class="status-dot online"></span> 3 agents online</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-node flow-node-transfer">
+                        <span class="flow-port left"></span>
+                        <div class="flow-node-icon icon-transfer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="flow-node-body">
+                            <span class="flow-node-kind">Transfer</span>
+                            <span class="flow-node-title">Billing team</span>
+                            <span class="flow-node-meta"><span class="status-dot online"></span> 4 agents online</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="whatomate" id="features">
+    <!-- Trust bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <p class="trust-lead">Built for teams that can't afford per-minute fees or third-party data</p>
+            <div class="trust-items">
+                <div class="trust-item"><span class="trust-value">Multi-tenant</span><span class="trust-label">Orgs &amp; teams</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-item"><span class="trust-value">5 min</span><span class="trust-label">Docker setup</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-item"><span class="trust-value">$0</span><span class="trust-label">Per-message fees</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-item"><span class="trust-value">Any S3</span><span class="trust-label">AWS · Wasabi · MinIO</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-item"><span class="trust-value">AGPL</span><span class="trust-label">Open source</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calling pillars -->
+    <section class="pillars" id="calling">
         <div class="container">
             <div class="section-header">
-                <span class="section-label whatomate-label">Why Whatomate</span>
-                <h2 class="section-title">Built for speed and simplicity</h2>
-                <p class="section-subtitle">Everything you need for WhatsApp Business automation, packaged in a single binary.</p>
+                <span class="section-tag">Voice platform</span>
+                <h2>Run WhatsApp calls the way you run your stack.</h2>
+                <p class="section-desc">Most self-hosted projects stop at messaging. Whatomate is the one that goes all the way to voice — routing, recording, and storage you own end-to-end.</p>
             </div>
 
-            <div class="whatomate-content">
-                <div class="whatomate-features-grid fade-in">
-                    <!-- Feature 1 -->
-                    <div class="whatomate-feature">
-                        <div class="whatomate-feature-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10 9 9 9 8 9"/>
-                            </svg>
+            <div class="pillars-grid">
+                <!-- Pillar 1: Calls -->
+                <article class="pillar fade-in">
+                    <div class="pillar-meta">
+                        <span class="pillar-num">01</span>
+                        <span class="pillar-label">Calling</span>
+                    </div>
+                    <h3>Inbound &amp; outbound</h3>
+                    <p>Receive customer calls on your WhatsApp number and place outbound calls from the dashboard or a single API request.</p>
+                    <div class="pillar-visual">
+                        <div class="call-row">
+                            <span class="call-dir dir-in" title="Inbound">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                            </span>
+                            <div class="call-name">Jane Smith<span class="muted">+1 555 0142</span></div>
+                            <span class="call-dur">02:14</span>
+                            <span class="tag tag-ok">answered</span>
                         </div>
-                        <h4>Template management</h4>
-                        <p>Create, manage, and sync message templates from Meta. Use variables for personalized messaging.</p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="whatomate-feature">
-                        <div class="whatomate-feature-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
+                        <div class="call-row">
+                            <span class="call-dir dir-out" title="Outbound">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                            <div class="call-name">Outbound<span class="muted">+1 555 0197</span></div>
+                            <span class="call-dur">00:42</span>
+                            <span class="tag tag-ok">completed</span>
                         </div>
-                        <h4>Chatbot flows</h4>
-                        <p>Build automated conversation flows with keyword triggers, multi-step responses, and AI fallback.</p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="whatomate-feature">
-                        <div class="whatomate-feature-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
+                        <div class="call-row">
+                            <span class="call-dir dir-missed" title="Missed">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            </span>
+                            <div class="call-name">TechBuild Inc<span class="muted">+44 20 7946</span></div>
+                            <span class="call-dur">—</span>
+                            <span class="tag tag-miss">missed</span>
                         </div>
-                        <h4>Human handoff</h4>
-                        <p>Smart escalation with message pool. Agents pick from pre-written responses for faster support.</p>
                     </div>
+                </article>
 
-                    <!-- Feature 4 -->
-                    <div class="whatomate-feature">
-                        <div class="whatomate-feature-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
+                <!-- Pillar 2: IVR -->
+                <article class="pillar pillar-primary fade-in">
+                    <div class="pillar-meta">
+                        <span class="pillar-num">02</span>
+                        <span class="pillar-label">Routing</span>
+                    </div>
+                    <h3>Node-based IVR builder</h3>
+                    <p>Drag, drop, and wire nodes on a canvas. Greet, capture input, branch, hit your API mid-call, route to agent teams, schedule by business hours — all visual.</p>
+                    <div class="pillar-visual">
+                        <div class="mini-flow">
+                            <span class="mini-node"><span class="mini-dot g"></span>Greet</span>
+                            <span class="mini-line"></span>
+                            <span class="mini-node active"><span class="mini-dot g"></span>Branch</span>
+                            <div class="mini-fan">
+                                <div class="mini-fan-line"></div>
+                                <div class="mini-fan-items">
+                                    <span class="mini-node sm">Transfer</span>
+                                    <span class="mini-node sm">Gather</span>
+                                    <span class="mini-node sm">Hangup</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Modern UI</h4>
-                        <p>Beautiful Vue.js interface. Manage conversations, templates, and automations with ease.</p>
                     </div>
+                </article>
 
-                    <!-- Feature 5 -->
-                    <div class="whatomate-feature">
-                        <div class="whatomate-feature-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="2" y1="12" x2="22" y2="12"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                <!-- Pillar 3: Recording -->
+                <article class="pillar fade-in">
+                    <div class="pillar-meta">
+                        <span class="pillar-num">03</span>
+                        <span class="pillar-label">Recording</span>
+                    </div>
+                    <h3>Recordings → S3</h3>
+                    <p>Every recording is encrypted and streamed straight to the S3-compatible bucket you configure. You set retention. You own the keys.</p>
+                    <div class="pillar-visual">
+                        <div class="player">
+                            <button class="player-play" type="button" aria-label="Play">
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </button>
+                            <div class="waveform">
+                                <span style="height:30%"></span><span style="height:60%"></span><span style="height:45%"></span><span style="height:80%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:40%"></span><span style="height:90%"></span><span style="height:50%"></span><span style="height:65%"></span><span style="height:35%"></span><span style="height:75%"></span><span style="height:50%"></span>
+                            </div>
+                            <span class="tag tag-s3">S3</span>
                         </div>
-                        <h4>Any stack</h4>
-                        <p>REST API for easy integration. Works with Node.js, Python, PHP, Ruby &mdash; whatever you use.</p>
-                    </div>
-
-                    <!-- Feature 6 -->
-                    <div class="whatomate-feature">
-                        <div class="whatomate-feature-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <line x1="22" y1="2" x2="11" y2="13"/>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                            </svg>
+                        <div class="player dim">
+                            <button class="player-play" type="button" aria-label="Play">
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </button>
+                            <div class="waveform">
+                                <span style="height:50%"></span><span style="height:35%"></span><span style="height:70%"></span><span style="height:45%"></span><span style="height:60%"></span><span style="height:40%"></span><span style="height:75%"></span><span style="height:50%"></span><span style="height:65%"></span><span style="height:35%"></span><span style="height:55%"></span><span style="height:45%"></span><span style="height:60%"></span>
+                            </div>
+                            <span class="tag tag-s3">S3</span>
                         </div>
-                        <h4>Bulk messaging</h4>
-                        <p>Send messages to thousands of contacts at once. Import contacts, use templates, and track delivery.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Get Started Section -->
-    <section class="installation" id="get-started">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label whatomate-label">Quick start</span>
-                <h2 class="section-title">Get started in minutes</h2>
-                <p class="section-subtitle">Deploy with Docker Compose in four simple steps.</p>
-            </div>
-
-            <div class="install-cards fade-in">
-                <div class="install-card">
-                    <h4>1. Download compose file <span>Required</span></h4>
-                    <div class="code-block">
-                        curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/docker/docker-compose.yml
-                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                    </div>
-                </div>
-                <div class="install-card">
-                    <h4>2. Download config <span>Required</span></h4>
-                    <div class="code-block">
-                        curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/config.example.toml
-                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                    </div>
-                </div>
-                <div class="install-card">
-                    <h4>3. Create config <span>Required</span></h4>
-                    <div class="code-block">
-                        cp config.example.toml config.toml
-                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                    </div>
-                </div>
-                <div class="install-card">
-                    <h4>4. Run services <span>Final step</span></h4>
-                    <div class="code-block">
-                        docker compose up -d
-                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- IVR Deep-Dive -->
+    <section class="deep-dive" id="ivr">
         <div class="container">
-            <div class="cta-box fade-in">
-                <div class="cta-content">
-                    <h2>Ready to integrate WhatsApp?</h2>
-                    <p>Whatomate is free, open source, and production-ready. Get started in minutes.</p>
-                    <div class="hero-buttons">
-                        <a href="https://github.com/shridarpatil/whatomate" class="btn btn-whatomate" target="_blank" rel="noopener noreferrer">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            Get Whatomate
-                        </a>
-                        <a href="https://shridarpatil.github.io/whatomate/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            Read the Docs
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Frappe Apps Section -->
-    <section class="choose-solution" id="frappe">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Also available</span>
-                <h2 class="section-title">Using Frappe or ERPNext?</h2>
-                <p class="section-subtitle">We also offer native WhatsApp integration apps for the Frappe ecosystem.</p>
-            </div>
-            <div class="solution-grid" style="grid-template-columns: 1fr;">
-                <!-- Frappe Suite -->
-                <div class="solution-card frappe-solution fade-in" style="max-width: 600px; margin: 0 auto;">
-                    <div class="solution-badge">For Frappe/ERPNext Users</div>
-                    <div class="solution-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="solution-title">Frappe WhatsApp Suite</h3>
-                    <p class="solution-description">Three integrated apps that extend your Frappe/ERPNext system with native WhatsApp capabilities. Deep DocType integration, Frappe Desk chat UI, and AI-powered chatbot.</p>
-                    <ul class="solution-features">
+            <div class="deep-dive-wrap">
+                <div class="deep-dive-copy fade-in">
+                    <span class="section-tag">Node-based IVR</span>
+                    <h2>Build call routing visually. Ship it in minutes, not sprints.</h2>
+                    <p>Whatomate's IVR editor is built for product teams — not only telecom engineers. Drag nodes onto the canvas, wire them together, and publish a new flow without a deploy.</p>
+                    <ul class="check-list">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            500+ active sites on Frappe Cloud
+                            <span><strong>Greeting</strong> — uploaded audio or text-to-speech prompts</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            One-click Frappe Cloud install
+                            <span><strong>Menu &amp; Gather</strong> — DTMF branching plus multi-digit input (account numbers, PINs)</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            DocType event triggers
+                            <span><strong>HTTP Callback</strong> — call your backend mid-flow with caller context and route on the response</span>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            AI chatbot with OpenAI, Anthropic, Google
+                            <span><strong>Transfer to agent teams</strong> — route to a team, handoff with full conversation context</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Timing</strong> — business-hours routing by IANA timezone, with after-hours fallback</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Goto Flow</strong> — reusable sub-flows you can wire into any parent</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Hangup</strong> — end the call with an optional goodbye prompt</span>
                         </li>
                     </ul>
-                    <a href="frappe.html" class="btn btn-secondary solution-btn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-                        Explore Frappe Apps
+                </div>
+
+                <div class="deep-dive-mock fade-in">
+                    <div class="product-window editor-window">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-tabs">
+                                <span class="window-tab active">Support Flow</span>
+                                <span class="window-tab">Sales Flow</span>
+                            </div>
+                            <span class="window-meta"><span class="status-dot live"></span> Live</span>
+                        </div>
+                        <div class="editor-body">
+                            <aside class="editor-sidebar">
+                                <span class="editor-section">Nodes</span>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg> Greeting</div>
+                                <div class="editor-item active"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></svg> Menu</div>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h1M14 9h1M9 13h1M14 13h1M9 17h6"/></svg> Gather</div>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> HTTP Callback</div>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Transfer</div>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Timing</div>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Goto Flow</div>
+                                <div class="editor-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"/><line x1="23" y1="1" x2="17" y2="7"/><line x1="17" y1="1" x2="23" y2="7"/></svg> Hangup</div>
+                            </aside>
+
+                            <div class="editor-canvas">
+                                <svg class="editor-grid" aria-hidden="true">
+                                    <defs>
+                                        <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
+                                            <circle cx="1" cy="1" r="0.8" fill="#2a2a32"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="100%" height="100%" fill="url(#grid)"/>
+                                </svg>
+                                <svg class="editor-lines" viewBox="0 0 520 320" preserveAspectRatio="none" aria-hidden="true">
+                                    <path d="M 110 80 C 170 80, 180 80, 220 80" stroke="#25D366" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
+                                    <path d="M 360 80 C 400 80, 400 80, 420 80" stroke="#25D366" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
+                                    <path d="M 360 80 C 400 80, 400 170, 420 170" stroke="#25D366" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
+                                    <path d="M 360 80 C 400 80, 400 250, 420 250" stroke="#25D366" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
+                                </svg>
+
+                                <div class="ed-node ed-greeting" style="top:56px;left:20px">
+                                    <span class="ed-kind">Greeting</span>
+                                    <span class="ed-title">Welcome message</span>
+                                </div>
+                                <div class="ed-node ed-selected ed-menu" style="top:56px;left:220px">
+                                    <span class="ed-kind">Menu</span>
+                                    <span class="ed-title">Press 1–3</span>
+                                </div>
+                                <div class="ed-node ed-sm ed-transfer" style="top:56px;left:420px">
+                                    <span class="ed-title">Transfer</span>
+                                </div>
+                                <div class="ed-node ed-sm ed-gather" style="top:146px;left:420px">
+                                    <span class="ed-title">Gather</span>
+                                </div>
+                                <div class="ed-node ed-sm ed-hangup" style="top:226px;left:420px">
+                                    <span class="ed-title">Hangup</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recording Deep-Dive -->
+    <section class="deep-dive deep-dive-alt" id="recording">
+        <div class="container">
+            <div class="deep-dive-wrap reverse">
+                <div class="deep-dive-mock fade-in">
+                    <div class="product-window">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-tabs">
+                                <span class="window-tab active">Recordings</span>
+                                <span class="window-tab">Retention</span>
+                            </div>
+                            <span class="window-meta"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15V9a2 2 0 0 0-2-2h-3l-2-2H10L8 7H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/></svg> s3://calls-prod</span>
+                        </div>
+                        <div class="recording-list">
+                            <div class="rec-row">
+                                <div class="mock-avatar">JS</div>
+                                <div class="rec-info">
+                                    <span class="rec-name">Jane Smith</span>
+                                    <span class="rec-meta">Today · 14:32 · inbound</span>
+                                </div>
+                                <div class="player inline">
+                                    <button class="player-play" type="button" aria-label="Play">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    </button>
+                                    <div class="waveform">
+                                        <span style="height:30%"></span><span style="height:70%"></span><span style="height:45%"></span><span style="height:85%"></span><span style="height:55%"></span><span style="height:65%"></span><span style="height:40%"></span><span style="height:75%"></span><span style="height:50%"></span><span style="height:60%"></span>
+                                    </div>
+                                </div>
+                                <span class="rec-dur">04:56</span>
+                                <span class="tag tag-s3">S3</span>
+                            </div>
+                            <div class="rec-row">
+                                <div class="mock-avatar bg2">TB</div>
+                                <div class="rec-info">
+                                    <span class="rec-name">TechBuild Inc</span>
+                                    <span class="rec-meta">Today · 11:08 · outbound</span>
+                                </div>
+                                <div class="player inline">
+                                    <button class="player-play" type="button" aria-label="Play">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    </button>
+                                    <div class="waveform">
+                                        <span style="height:50%"></span><span style="height:40%"></span><span style="height:65%"></span><span style="height:45%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:80%"></span><span style="height:35%"></span><span style="height:60%"></span><span style="height:45%"></span>
+                                    </div>
+                                </div>
+                                <span class="rec-dur">02:08</span>
+                                <span class="tag tag-s3">S3</span>
+                            </div>
+                            <div class="rec-row">
+                                <div class="mock-avatar bg3">DM</div>
+                                <div class="rec-info">
+                                    <span class="rec-name">Diana Morales</span>
+                                    <span class="rec-meta">Yesterday · 09:41 · inbound</span>
+                                </div>
+                                <div class="player inline">
+                                    <button class="player-play" type="button" aria-label="Play">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    </button>
+                                    <div class="waveform">
+                                        <span style="height:35%"></span><span style="height:55%"></span><span style="height:40%"></span><span style="height:60%"></span><span style="height:30%"></span><span style="height:70%"></span><span style="height:45%"></span><span style="height:55%"></span><span style="height:35%"></span><span style="height:65%"></span>
+                                    </div>
+                                </div>
+                                <span class="rec-dur">00:42</span>
+                                <span class="tag tag-s3">S3</span>
+                            </div>
+                            <div class="rec-row">
+                                <div class="mock-avatar">AK</div>
+                                <div class="rec-info">
+                                    <span class="rec-name">Arjun Kapoor</span>
+                                    <span class="rec-meta">Yesterday · 16:22 · inbound</span>
+                                </div>
+                                <div class="player inline">
+                                    <button class="player-play" type="button" aria-label="Play">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    </button>
+                                    <div class="waveform">
+                                        <span style="height:60%"></span><span style="height:45%"></span><span style="height:75%"></span><span style="height:50%"></span><span style="height:35%"></span><span style="height:65%"></span><span style="height:40%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:45%"></span>
+                                    </div>
+                                </div>
+                                <span class="rec-dur">07:13</span>
+                                <span class="tag tag-s3">S3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deep-dive-copy fade-in">
+                    <span class="section-tag">Recording &amp; storage</span>
+                    <h2>Your calls. Your bucket. Your rules.</h2>
+                    <p>Every recording is streamed directly to the S3-compatible storage <em>you</em> control. Nothing passes through our servers, because there are no "our" servers — it's your infrastructure.</p>
+                    <ul class="check-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Any S3-compatible target</strong> — AWS S3, Wasabi, Backblaze B2, MinIO, Cloudflare R2, DigitalOcean Spaces</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Org-wide recording toggle</strong> — enable once in config, every call lands in your bucket</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Lifecycle-ready</strong> — use your bucket's retention and archival rules directly</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Pre-signed URL playback</strong> — hear a call in the UI without exposing the bucket</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Agent-caller audio</strong> — both sides captured end-to-end for QA and compliance</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Data residency</strong> — recordings never leave the region of the bucket you choose</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messaging pillars -->
+    <section class="pillars" id="messaging">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Messaging</span>
+                <h2>And the engine you'll actually use every day.</h2>
+                <p class="section-desc">Calling is the differentiator. Messaging is the daily driver — and it's built to the same standard. Conversations, templates, and campaigns, all first-class.</p>
+            </div>
+
+            <div class="pillars-grid">
+                <article class="pillar fade-in">
+                    <div class="pillar-meta">
+                        <span class="pillar-num">04</span>
+                        <span class="pillar-label">Conversations</span>
+                    </div>
+                    <h3>Chatbot &amp; handoff</h3>
+                    <p>Keyword triggers, multi-step flows, and AI fallback with OpenAI, Anthropic, or Google. Bot hands off to a human when stuck.</p>
+                    <div class="pillar-visual">
+                        <div class="mini-chat">
+                            <div class="mini-bubble received">Hi, where's order #4521?</div>
+                            <div class="mini-bubble sent">Shipped today ✓</div>
+                            <div class="mini-bubble received">Thanks!</div>
+                            <div class="mini-handoff">
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>
+                                Bot → Anna
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pillar pillar-primary fade-in">
+                    <div class="pillar-meta">
+                        <span class="pillar-num">05</span>
+                        <span class="pillar-label">Templates</span>
+                    </div>
+                    <h3>Meta-synced templates</h3>
+                    <p>Create, sync from Meta, and send with <code>{{variables}}</code>. Full component support — headers, buttons, media, CTAs.</p>
+                    <div class="pillar-visual">
+                        <div class="template-card">
+                            <div class="template-head">
+                                <span class="template-name">order_confirmation</span>
+                                <span class="tag tag-ok">approved</span>
+                            </div>
+                            <div class="template-body">
+                                Order <span class="var">&#123;&#123;1&#125;&#125;</span> confirmed!<br>
+                                Arrives <span class="var">&#123;&#123;2&#125;&#125;</span>. Track: <span class="var">&#123;&#123;3&#125;&#125;</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pillar fade-in">
+                    <div class="pillar-meta">
+                        <span class="pillar-num">06</span>
+                        <span class="pillar-label">Campaigns</span>
+                    </div>
+                    <h3>Bulk sends, live analytics</h3>
+                    <p>Send to thousands in one click. Track delivery, read, and reply rates in real time. Segment by tags or custom fields.</p>
+                    <div class="pillar-visual">
+                        <div class="mini-campaign">
+                            <div class="mini-campaign-row">
+                                <span>summer_launch</span>
+                                <span class="muted">2,847 / 3,500</span>
+                            </div>
+                            <div class="campaign-bar"><div class="campaign-progress" style="width:81%"></div></div>
+                            <div class="mini-campaign-row">
+                                <span>retention_may</span>
+                                <span class="muted">done · 94%</span>
+                            </div>
+                            <div class="campaign-bar"><div class="campaign-progress" style="width:100%"></div></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Messaging deep-dive -->
+    <section class="deep-dive deep-dive-alt">
+        <div class="container">
+            <div class="deep-dive-wrap reverse">
+                <div class="deep-dive-copy fade-in">
+                    <span class="section-tag">Shared inbox</span>
+                    <h2>A shared inbox your team can actually live in.</h2>
+                    <p>Every conversation — chat or call — lands in one unified inbox. Agents pick from a shared pool, templates drop in with one click, and the handoff from chatbot to human is seamless.</p>
+                    <ul class="check-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Agent teams</strong> — round-robin, load-balanced, or manual pick from the team queue</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Canned responses</strong> — categorized quick replies with variable substitution</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Unified history</strong> — chats and calls on one timeline per contact</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Rich media</strong> — images, documents, audio, and video</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Contact profiles</strong> — tags, custom metadata, and account filtering</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Webhooks</strong> — react to incoming messages and Meta delivery status in real time</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-mock fade-in">
+                    <div class="product-window chat-window">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-tabs">
+                                <span class="window-tab active">Conversations</span>
+                                <span class="window-tab">Templates</span>
+                                <span class="window-tab">Campaigns</span>
+                            </div>
+                        </div>
+                        <div class="chat-body">
+                            <div class="chat-header">
+                                <div class="mock-avatar bg2">JS</div>
+                                <div class="chat-ident">
+                                    <span class="chat-name">Jane Smith</span>
+                                    <span class="chat-sub"><span class="status-dot online"></span> typing…</span>
+                                </div>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="chat-head-icon"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="chat-msg received">
+                                    <span>Hi! Can you check order <strong>#4521</strong>?</span>
+                                    <span class="chat-time">10:32</span>
+                                </div>
+                                <div class="chat-msg sent">
+                                    <span>Your order #4521 has shipped. Tracking: <code class="chat-code">TRK-9281</code></span>
+                                    <span class="chat-time">10:33 ✓✓</span>
+                                </div>
+                                <div class="chat-msg received">
+                                    <span>Thanks! 🎉</span>
+                                    <span class="chat-time">10:34</span>
+                                </div>
+                                <div class="chat-msg sent template">
+                                    <div class="chat-template-badge">Template · order_confirmation</div>
+                                    <span>Order confirmed! Arrives <strong>Apr 8</strong>. Track at trk.io/9281</span>
+                                    <span class="chat-time">10:35 ✓✓</span>
+                                </div>
+                                <div class="chat-system">
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg>
+                                    Chatbot handed off to <strong>Anna</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="campaign-mock">
+                        <div class="campaign-header">
+                            <span class="campaign-name">summer_launch</span>
+                            <span class="tag tag-ok">sending</span>
+                        </div>
+                        <div class="campaign-stats">
+                            <span><strong>2,847</strong> <em>/ 3,500</em> sent</span>
+                            <span><strong>94%</strong> delivered</span>
+                            <span><strong>67%</strong> read</span>
+                        </div>
+                        <div class="campaign-bar"><div class="campaign-progress" style="width:81%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="how-it-works" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Architecture</span>
+                <h2>Batteries included. One command to deploy.</h2>
+                <p class="section-desc">Docker Compose ships Whatomate with Postgres and Redis — everything it needs to run. Paste in your Meta credentials — access token, phone number ID, business account ID — point it at an S3 bucket, and you're live.</p>
+            </div>
+
+            <div class="architecture fade-in">
+                <div class="arch-block">
+                    <div class="arch-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                    </div>
+                    <div class="arch-label">Your app</div>
+                    <div class="arch-sub">Any language</div>
+                </div>
+                <div class="arch-connector">
+                    <div class="arch-line"></div>
+                    <span class="arch-protocol">REST · Webhooks</span>
+                </div>
+                <div class="arch-block arch-primary">
+                    <div class="arch-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                    </div>
+                    <div class="arch-label">Whatomate</div>
+                    <div class="arch-sub">Go + Vue.js</div>
+                    <div class="arch-features-mini">
+                        <span>Calls</span>
+                        <span>IVR</span>
+                        <span>Chatbot</span>
+                        <span>Templates</span>
+                    </div>
+                </div>
+                <div class="arch-connector arch-connector-split">
+                    <div class="arch-split">
+                        <div class="arch-line"></div>
+                        <span class="arch-protocol">Cloud API</span>
+                    </div>
+                    <div class="arch-split">
+                        <div class="arch-line"></div>
+                        <span class="arch-protocol">S3 API</span>
+                    </div>
+                </div>
+                <div class="arch-column">
+                    <div class="arch-block">
+                        <div class="arch-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </div>
+                        <div class="arch-label">WhatsApp</div>
+                        <div class="arch-sub">Meta Cloud API</div>
+                    </div>
+                    <div class="arch-block">
+                        <div class="arch-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15V9a2 2 0 0 0-2-2h-3l-2-2H10L8 7H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/></svg>
+                        </div>
+                        <div class="arch-label">Your S3</div>
+                        <div class="arch-sub">Recordings &amp; media</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="value-props fade-in">
+                <div class="value-prop">
+                    <div class="value-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h4>Blazing fast</h4>
+                    <p>Written in Go. Handles thousands of concurrent calls and messages with single-digit MB of RAM.</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4>Self-hosted &amp; private</h4>
+                    <p>Your conversations, your recordings, your data. Full control, zero third-party middlemen.</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <h4>Batteries included</h4>
+                    <p>The full stack ships in one Compose file — Whatomate, Postgres, and Redis. <code>docker compose up -d</code> and you're running.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer API -->
+    <section class="developer" id="developer">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Developer API</span>
+                <h2>Everything the UI does, you can do over REST.</h2>
+                <p class="section-desc">Send messages, manage contacts, trigger flows, fetch recordings, wire up webhooks — from any backend in any language.</p>
+            </div>
+
+            <div class="code-window fade-in">
+                <div class="window-bar">
+                    <div class="window-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="window-tabs">
+                        <span class="window-tab active">POST /api/contacts/{id}/messages</span>
+                        <span class="window-tab">webhook.json</span>
+                    </div>
+                </div>
+                <div class="code-body">
+<pre><span class="c-kw">curl</span> <span class="c-fl">-X</span> POST <span class="c-str">"http://your-server:8080/api/contacts/{contact_id}/messages"</span> \
+  <span class="c-fl">-H</span> <span class="c-str">"X-API-Key: whm_your_api_key"</span> \
+  <span class="c-fl">-H</span> <span class="c-str">"Content-Type: application/json"</span> \
+  <span class="c-fl">-d</span> <span class="c-str">'{
+    "type": "text",
+    "text": "Hello! How can I help you today?"
+  }'</span></pre>
+                </div>
+            </div>
+
+            <div class="api-features fade-in">
+                <div class="api-feat">
+                    <span class="api-dot"></span>
+                    <div>
+                        <strong>REST-first</strong>
+                        <p>Call the API from Node, Python, PHP, Ruby, Go, Java — no SDK required.</p>
+                    </div>
+                </div>
+                <div class="api-feat">
+                    <span class="api-dot"></span>
+                    <div>
+                        <strong>Webhooks for incoming events</strong>
+                        <p>Meta-delivered messages and status updates forwarded to your endpoint in real time.</p>
+                    </div>
+                </div>
+                <div class="api-feat">
+                    <span class="api-dot"></span>
+                    <div>
+                        <strong>Contacts, templates, flows, campaigns</strong>
+                        <p>Full REST surface: users, accounts, roles, chatbot, custom actions, analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started -->
+    <section class="get-started" id="get-started">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get Started</span>
+                <h2>Deploy in under 5 minutes.</h2>
+                <p class="section-desc">Four commands. Docker Compose. Then you're running calls, IVR, and messaging on your own infrastructure.</p>
+            </div>
+
+            <div class="install-terminal fade-in">
+                <div class="terminal-bar">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="terminal-title">bash · whatomate-setup</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-comment"># Clone the repo</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-cmd">git clone https://github.com/shridarpatil/whatomate.git &amp;&amp; cd whatomate</span>
+                        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-comment"># Copy config + .env</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-cmd">cp config.example.toml docker/config.toml &amp;&amp; cp docker/.env.example docker/.env</span>
+                        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-comment"># Start Whatomate + Postgres + Redis</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-cmd">make docker-up</span>
+                        <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        </button>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="terminal-success">&#10003;</span>
+                        <span>whatomate · postgres · redis started</span>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="terminal-success">&#10003;</span>
+                        <span>dashboard at http://localhost:8080 (admin@admin.com / admin)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start-links fade-in">
+                <a href="https://shridarpatil.github.io/whatomate/" class="start-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <div>
+                        <strong>Documentation</strong>
+                        <span>Setup, calling, IVR builder, API reference</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://github.com/shridarpatil/whatomate" class="start-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <div>
+                        <strong>Source on GitHub</strong>
+                        <span>Star the repo, report issues, contribute</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frappe Section -->
+    <section class="frappe-section" id="frappe">
+        <div class="container">
+            <div class="frappe-banner fade-in">
+                <div class="frappe-banner-content">
+                    <span class="section-tag">Also available</span>
+                    <h3>On Frappe or ERPNext?</h3>
+                    <p>Native WhatsApp integration suite for the Frappe ecosystem — 500+ active sites, DocType event triggers, AI-powered chatbot. Calling lands in the Frappe suite next.</p>
+                    <a href="frappe.html" class="btn btn-outline">
+                        Explore Frappe apps
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
+                </div>
+                <div class="frappe-banner-apps">
+                    <div class="frappe-app-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        Frappe WhatsApp
+                    </div>
+                    <div class="frappe-app-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        WhatsApp Chat
+                    </div>
+                    <div class="frappe-app-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                        WhatsApp Chatbot
+                    </div>
                 </div>
             </div>
         </div>
@@ -400,19 +1068,42 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    Built by <a href="https://github.com/shridarpatil" target="_blank" rel="noopener noreferrer">Shridhar Patil</a> &bull; Free & Open Source
+                <div class="footer-left">
+                    <a href="#" class="logo">
+                        <div class="logo-mark sm">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#08080a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </div>
+                        Whatomate
+                    </a>
+                    <p class="footer-desc">Open-source, self-hosted WhatsApp platform. Calling, IVR, recording &amp; messaging — on your infrastructure.<br>Built by <a href="https://github.com/shridarpatil" target="_blank" rel="noopener noreferrer">Shridhar Patil</a>.</p>
                 </div>
-                <div class="footer-links">
-                    <a href="https://github.com/shridarpatil/whatomate" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="frappe.html">Frappe Apps</a>
-                    <a href="https://shridarpatil.github.io/whatomate/" target="_blank" rel="noopener noreferrer">Docs</a>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#calling">Calling</a>
+                        <a href="#ivr">IVR builder</a>
+                        <a href="#recording">Recording</a>
+                        <a href="#messaging">Messaging</a>
+                        <a href="#developer">API</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="https://shridarpatil.github.io/whatomate/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                        <a href="https://github.com/shridarpatil/whatomate" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="#get-started">Get started</a>
+                        <a href="frappe.html">Frappe apps</a>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <span>AGPL-3.0 License</span>
+                <span>Free &amp; open source</span>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
 
     <!-- Analytics -->

@@ -1,86 +1,83 @@
-# Whatomate - Open Source WhatsApp Business API
+# Whatomate — Self-hosted WhatsApp Calling, IVR & Messaging
 
-> Whatomate is a free, open-source standalone WhatsApp Business API application. Built with Go for performance and Vue.js for a modern UI. Single binary, zero dependencies, works with any tech stack.
+> Whatomate is a free, open-source WhatsApp Business platform that runs on your own infrastructure. It ships inbound and outbound calling, a visual node-based IVR builder, call recording to S3, and full messaging automation (chatbot, templates, bulk campaigns, shared inbox). Built in Go + Vue.js. Docker Compose with Postgres + Redis deploys the whole stack in one command.
 
-## Overview
+## What makes Whatomate different
 
-Whatomate provides WhatsApp Business automation as a standalone application that integrates with any system via REST API.
+Most open-source WhatsApp API projects stop at messaging. Whatomate goes all the way to voice: take inbound calls on your WhatsApp number, dial outbound from the UI or API, route callers through a visual IVR, and stream every recording to the S3 bucket you control.
 
-## Whatomate (Primary Product)
+### Voice platform
+- Inbound and outbound WhatsApp calls
+- Node-based IVR builder with 8 node types:
+  - **Greeting** — TTS or uploaded audio prompts
+  - **Menu** — DTMF keypad branching
+  - **Gather** — multi-digit capture (account numbers, PINs)
+  - **HTTP Callback** — call your backend mid-flow, route on response
+  - **Transfer** — route to agent teams with full conversation context
+  - **Timing** — business-hours routing by IANA timezone
+  - **Goto Flow** — reusable sub-flows
+  - **Hangup** — end call with optional goodbye prompt
+- Call recording streamed to any S3-compatible bucket (AWS, Wasabi, Backblaze B2, MinIO, Cloudflare R2, DigitalOcean Spaces)
+- Pre-signed URL playback in the admin UI
+- Data residency — recordings stay in the region of the bucket you choose
 
-A standalone WhatsApp Business API application built with Go and Vue.js.
+### Messaging
+- Chatbot with keyword triggers, multi-step flows, AI fallback (OpenAI, Anthropic, Google)
+- Bot-to-human handoff
+- Meta-synced message templates with `{{variables}}`
+- Bulk campaigns with live delivery, read, and reply tracking
+- Shared team inbox with round-robin / load-balanced / manual assignment
+- Canned responses with categories and variable substitution
+- Unified contact timeline spanning chats and calls
+- Rich media: images, documents, audio, video
 
-### Features
-- Single binary deployment - no dependencies required
-- Go backend for blazing performance
-- Vue.js frontend for modern UI
-- Human handoff with message pool
-- REST API for easy integration
-- Works with any tech stack (Node.js, Python, PHP, Ruby, etc.)
-- 100% free and open source (MIT license)
+### Platform
+- Multi-tenant: organizations, teams, roles, API keys
+- REST API — every UI feature available over HTTP
+- Webhooks — Meta-delivered incoming messages and status updates forwarded to your endpoint
 
-### Installation (Docker)
+## Positioning
+
+- **Open source.** AGPL-3.0, source on GitHub
+- **Self-hosted.** Your data, your recordings, your infrastructure
+- **No per-message or per-minute fees** — you only pay Meta and your hosting
+
+## Installation (Docker Compose)
+
 ```bash
-# Download compose file and sample config
-curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/docker/docker-compose.yml
-curl -LO https://raw.githubusercontent.com/shridarpatil/whatomate/main/config.example.toml
-
-# Copy and edit config
-cp config.example.toml config.toml
-
-# Run services
-docker compose up -d
+git clone https://github.com/shridarpatil/whatomate.git && cd whatomate
+cp config.example.toml docker/config.toml
+cp docker/.env.example docker/.env   # edit to set Postgres credentials and timezone
+make docker-up
 ```
 
+Dashboard at http://localhost:8080 (default login `admin@admin.com` / `admin` — change immediately).
+
+## Configuration
+
+Users supply three Meta credentials:
+- **Access token** (WhatsApp Business Cloud API)
+- **Phone number ID**
+- **Business account ID**
+
+Plus an S3-compatible bucket for recordings.
+
+## Links
+
+- Website: https://whatomate.io
 - GitHub: https://github.com/shridarpatil/whatomate
 - Docs: https://shridarpatil.github.io/whatomate/
+- API reference: https://shridarpatil.github.io/whatomate/api-reference/overview
 
-## Frappe WhatsApp Suite (For Frappe/ERPNext Users)
+## Frappe WhatsApp Suite (For Frappe/ERPNext users)
 
-For users on Frappe/ERPNext, we also offer native integration apps. See https://whatomate.io/frappe.html
+For users on Frappe/ERPNext, native integration apps are available separately. See https://whatomate.io/frappe.html
 
-Three integrated apps for Frappe/ERPNext:
-
-### Frappe WhatsApp (Core)
-- Multi-account support
-- Two-way messaging
-- Template management & sync from Meta
-- WhatsApp Flows (interactive forms)
-- Bulk messaging with variables
-- WhatsApp Notifications (DocType events)
-- Media support (images, docs, audio, video)
-- GitHub: https://github.com/shridarpatil/frappe_whatsapp
-- Docs: https://shridarpatil.github.io/frappe_whatsapp/
-
-### WhatsApp Chat (UI)
-- Real-time messaging UI in Frappe Desk
-- Contact management
-- Media previews
-- Auto read receipts
-- Sound notifications
-- Multi-user support
-- GitHub: https://github.com/shridarpatil/whatsapp_chat
-
-### WhatsApp Chatbot (AI)
-- Keyword-based auto-replies
-- Multi-step conversation flows
-- Dynamic script responses
-- Document creation from chat
-- AI fallback (OpenAI, Anthropic, Google)
-- Session & business hours management
-- GitHub: https://github.com/shridarpatil/frappe_whatsapp_chatbot
-- Docs: https://shridarpatil.github.io/frappe_whatsapp_chatbot/
-
-## Frappe Cloud Marketplace
-
-Frappe apps are available on Frappe Cloud Marketplace:
-- https://frappecloud.com/marketplace/apps/frappe_whatsapp
-- https://frappecloud.com/marketplace/apps/whatsapp_chat
-- https://frappecloud.com/marketplace/apps/frappe_whatsapp_chatbot
+- **Frappe WhatsApp** — core messaging integration (https://github.com/shridarpatil/frappe_whatsapp)
+- **WhatsApp Chat** — real-time messaging UI in Frappe Desk (https://github.com/shridarpatil/whatsapp_chat)
+- **WhatsApp Chatbot** — keyword-based auto-replies and AI chatbot (https://github.com/shridarpatil/frappe_whatsapp_chatbot)
 
 ## Contact
 
-- Website: https://whatomate.io
-- Frappe Apps: https://whatomate.io/frappe.html
 - Author: Shridhar Patil
 - GitHub: https://github.com/shridarpatil

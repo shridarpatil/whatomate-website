@@ -1,117 +1,36 @@
-// Mouse parallax effect for hero
-const hero = document.querySelector('.hero');
-const bubbles = document.querySelectorAll('.bubble');
-const rings = document.querySelectorAll('.ring');
-
-hero.addEventListener('mousemove', (e) => {
-    const rect = hero.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
-    const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-
-    bubbles.forEach((bubble, index) => {
-        const speed = (index + 1) * 15;
-        bubble.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-    });
-
-    rings.forEach((ring, index) => {
-        const speed = (index + 1) * 5;
-        ring.style.transform = `translate(calc(-50% + ${x * speed}px), calc(-50% + ${y * speed}px))`;
-    });
-});
-
-hero.addEventListener('mouseleave', () => {
-    bubbles.forEach(bubble => {
-        bubble.style.transform = '';
-    });
-    rings.forEach(ring => {
-        ring.style.transform = 'translate(-50%, -50%)';
-    });
-});
-
 // Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+});
 
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
 
-// Stats counter animation
-function animateCounter(element, target, suffix, duration = 2000) {
-    const startTime = performance.now();
-    const startValue = 0;
-
-    function easeOutExpo(t) {
-        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-    }
-
-    function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easedProgress = easeOutExpo(progress);
-        const currentValue = Math.floor(startValue + (target - startValue) * easedProgress);
-
-        element.textContent = currentValue + suffix;
-
-        if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target + suffix;
-            element.parentElement.classList.add('animated');
-        }
-    }
-
-    requestAnimationFrame(updateCounter);
-}
-
-// Observe stats section
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const stats = entry.target.querySelectorAll('.stat');
-            stats.forEach((stat, index) => {
-                const target = parseInt(stat.dataset.target);
-                const suffix = stat.dataset.suffix;
-                const valueElement = stat.querySelector('.stat-value');
-
-                // Stagger the animations
-                setTimeout(() => {
-                    animateCounter(valueElement, target, suffix, 1500);
-                }, index * 200);
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
-
 // Copy to clipboard
 function copyCode(button) {
-    const codeBlock = button.parentElement;
-    const text = codeBlock.textContent.replace('Copy', '').replace('Copied!', '').replace('$', '').trim();
-    navigator.clipboard.writeText(text).then(() => {
-        button.textContent = 'Copied!';
+    const line = button.closest('.terminal-line');
+    const cmd = line.querySelector('.terminal-cmd');
+    if (!cmd) return;
+
+    navigator.clipboard.writeText(cmd.textContent.trim()).then(() => {
+        button.classList.add('copied');
+        button.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
         setTimeout(() => {
-            button.textContent = 'Copy';
+            button.classList.remove('copied');
+            button.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
         }, 2000);
     });
 }
 
-// Smooth scroll for nav links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -124,3 +43,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Nav background on scroll
+let lastScroll = 0;
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 50) {
+        nav.style.borderBottomColor = 'var(--border-light)';
+    } else {
+        nav.style.borderBottomColor = 'var(--border)';
+    }
+    lastScroll = scrollY;
+}, { passive: true });
